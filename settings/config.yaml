@@ -1,0 +1,33 @@
+web:
+  name: comyun
+  port: 8084
+  mode: "dev"
+  machine_id: 1
+  start_time: "2024-07-15"
+log:
+  level: "debug"
+  filename: "com_yun.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+mysql:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: "231231"
+  dbname: "comyun"
+  max_open_comms: 1000
+  maxx_idle_conns: 50
+mongo:
+  host: "127.0.0.1"
+  port: 27017
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  password: ""
+  pool_size: 500
+email:
+  sender: "3212339105@qq.com"
+  pass_code: "rbifgnbssfmrdgcf"
+  host_qq: "smtp.qq.com"
+  port: 587

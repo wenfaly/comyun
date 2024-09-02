@@ -25,17 +25,18 @@ comyun实现公司内部管理，公司流程表单、人员、订单信息等�
         ```
         ![发送验证码流程图](readmePic/sendEmail.png)
      	改进：redis中类似nysql的回滚操作，方便在存入验证码成功但发送邮件失败时避免redis无效存储（目前在出错时手动删除键值对redis.DeleteEmail(ep.Email)）
-     3. 注册填写基本信息
+     2. 注册填写基本信息
         ```go
         //注册-填写信息
 	      v1.POST("/signup",controller.Signup)
         ```
-     4. 注册验证验证码
+        ![注册基本信息](readmePic/SignUp.png)
+     3. 注册验证验证码
         ```go
         //注册-验证验证码
 	      v1.POST("/judge_code",controller.JudgeCode)
         ```
-     5. 两种登录方式
+     4. 两种登录方式
        ```go
         //登录并返回token
       	//邮箱登录
